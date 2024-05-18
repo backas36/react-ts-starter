@@ -1,0 +1,36 @@
+.h1 {
+    @apply py-4;
+}
+.container {
+    display: flex;
+    border: 1px solid blue;
+    width: 500px;
+}
+.item {
+    width: 200px;
+    height: 200px;
+    background-color: salmon;
+    border: 1px solid black;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.container02 {
+    display: flex;
+    width: 100%;
+    border: 1px solid blue;
+}
+
+.container03 {
+    display: flex;
+    border: 1px solid yellowgreen;
+    height: 400px;
+}
+
+.item02 {
+    background-color: sandybrown;
+    border: 1px solid black;
+    width: 200px;
+}

@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    outline: 1px solid blue;
+    width: 500px;
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+    background-color: sandybrown;
+    outline: 1px solid black;
+    flex-grow: 1;
+}
+
+.container800 {
+    width: 800px;
+    display: flex;
+    outline: 1px solid blue;
+}
+
+.item400 {
+    flex-basis: 400px;
+    background-color: lightcyan;
+    height: 100px;
+    outline: 1px solid black;
+}
