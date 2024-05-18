@@ -1,7 +1,14 @@
 import style from "./App.module.scss";
 
 function App() {
-    return <h1 className={style.h1}>Hello world!</h1>;
+    return (
+        <div>
+            <h1 className={style.h1}>Hello world!</h1>
+            <a href='/debounce-throttle' className='font-medium text-blue-600 hover:underline'>
+                Debounce & Throttle
+            </a>
+        </div>
+    );
 }
 
 export default App;
