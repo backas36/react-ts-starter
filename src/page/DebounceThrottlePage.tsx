@@ -3,34 +3,21 @@ import { useState } from "react";
 import useDebounce from "@/hooks/useDebounce";
 import useThrottle from "@/hooks/useThrottle";
 
-interface ICountry {
-    name: string;
-}
-
 const DebounceThrottlePage = () => {
-    const [data, setData] = useState<ICountry[] | null>(null);
+    const [searchInput, setSearchInput] = useState<string>("");
+
     const loadData = async (searchInput: string) => {
-        console.count("loadData");
         if (searchInput === "") {
-            setData(null);
             return;
         }
-        const response = await fetch(`https://countriesnow.space/api/v0.1/countries/positions`);
-        const resData = await response.json();
-        const countries = resData.data.filter((c: ICountry) => {
-            if (c.name.toLowerCase().includes(searchInput.toLowerCase())) {
-                return {
-                    name: c.name,
-                };
-            }
-        });
-        setData(countries);
+        setSearchInput(searchInput);
     };
-    const handleLoadDataDebounced = useDebounce(loadData, 5000);
+    const handleLoadDataDebounced = useDebounce(loadData, 3000);
     //const handleLoadDataDebounced = loadData;
 
-    const handleLoadDataThrottle = useThrottle(loadData, 5000);
-    //const handleLoadDataThrottle = loadData;
+    const handleClickThrottle = useThrottle(() => {
+        console.log("Throttle");
+    }, 3000);
     return (
         <div className='p-2'>
             <label className='block font-bold text-gray-500'>
@@ -41,29 +28,15 @@ const DebounceThrottlePage = () => {
                     className=' appearance-none rounded border-2 border-gray-200 bg-gray-200 px-4 py-2 text-gray-700 focus:border-purple-500 focus:bg-white focus:outline-none'
                 />
             </label>
-            <div className=''>
-                {data &&
-                    data.length > 0 &&
-                    data.map((country, idx) => {
-                        return <div key={idx}>{country.name}</div>;
-                    })}
-            </div>
+            <div className=''>search input = {searchInput}</div>
             <hr className='my-2 divide-y-2' />
-            <label className='block font-bold text-gray-500'>
-                Throttle:
-                <input
-                    type='text'
-                    onChange={(e) => handleLoadDataThrottle(e.target.value)}
-                    className=' appearance-none rounded border-2 border-gray-200 bg-gray-200 px-4 py-2 text-gray-700 focus:border-purple-500 focus:bg-white focus:outline-none'
-                />
-            </label>
-            <div className=''>
-                {data &&
-                    data.length > 0 &&
-                    data.map((country, idx) => {
-                        return <div key={idx}>{country.name}</div>;
-                    })}
-            </div>
+
+            <button
+                onClick={handleClickThrottle}
+                className='rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700'
+            >
+                Throttle
+            </button>
         </div>
     );
 };
