@@ -1,0 +1,61 @@
+.box {
+    display: grid;
+    place-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.container {
+    outline: 1px solid blue;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    justify-content: space-around;
+}
+
+// 讓最後一排填滿的 tips
+.container::after {
+    content: "";
+    flex: 1;
+}
+
+.card {
+    box-sizing: border-box;
+    outline: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+    width: 32%;
+    .imgBox {
+        & > img {
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    .body {
+        padding: 1rem 1rem;
+        .title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        max-width: 800px;
+    }
+    .card {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 500px;
+    }
+    .card {
+        width: 100%;
+    }
+}
