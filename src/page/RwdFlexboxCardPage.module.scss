@@ -12,6 +12,13 @@
     gap: 2%;
     justify-content: space-around;
 }
+
+// 讓最後一排填滿的 tips
+.container::after {
+    content: "";
+    flex: 1;
+}
+
 .card {
     box-sizing: border-box;
     outline: 1px solid #000;
