@@ -29,6 +29,9 @@ function App() {
                 <a href='/flexbox-rule' className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'>
                     Flexbox Rule
                 </a>
+                <a href='/image-lazy' className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'>
+                    Image Lazy Loading 01
+                </a>
             </div>
         </div>
     );
