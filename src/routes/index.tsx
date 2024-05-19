@@ -10,6 +10,8 @@ const FlexboxItemGrowPage = lazy(() => import("../page/FlexboxItemGrowPage"));
 const FlexboxItemShrinkPage = lazy(() => import("../page/FlexboxItemShrinkPage"));
 const FlexRulePage = lazy(() => import("../page/FlexRulePage"));
 const ImageLazyPage = lazy(() => import("../page/ImageLazyPage"));
+const RwdFlexboxCardPage = lazy(() => import("../page/RwdFlexboxCardPage"));
+
 const router = createBrowserRouter([
     { path: "/", element: <App /> },
     { path: "/debounce-throttle", element: <DebounceThrottlePage /> },
@@ -18,6 +20,7 @@ const router = createBrowserRouter([
     { path: "/flexbox-item-shrink", element: <FlexboxItemShrinkPage /> },
     { path: "/flexbox-rule", element: <FlexRulePage /> },
     { path: "/image-lazy", element: <ImageLazyPage /> },
+    { path: "/rwd-flexbox-card", element: <RwdFlexboxCardPage /> },
 ]);
 
 const Routes = () => {
