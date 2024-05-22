@@ -5,7 +5,6 @@ const useDebounce = <F extends (...args: any[]) => void>(fn: F, delay: number) =
         if (timeout) {
             clearTimeout(timeout);
         }
-        console.count("useDebounce");
         timeout = setTimeout(() => {
             fn(...args);
         }, delay);

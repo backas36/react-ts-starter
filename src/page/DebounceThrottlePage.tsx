@@ -7,6 +7,7 @@ const DebounceThrottlePage = () => {
     const [searchInput, setSearchInput] = useState<string>("");
 
     const loadData = async (searchInput: string) => {
+        console.log("loadData");
         if (searchInput === "") {
             return;
         }
@@ -16,7 +17,8 @@ const DebounceThrottlePage = () => {
     //const handleLoadDataDebounced = loadData;
 
     const handleClickThrottle = useThrottle(() => {
-        console.log("Throttle");
+        console.count("Throttle");
+        console.time("start");
     }, 3000);
     return (
         <div className='p-2'>
