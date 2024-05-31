@@ -1,0 +1,27 @@
+.box {
+    position: relative;
+    outline: 1px solid red;
+    display: inline-block;
+}
+.imgBox {
+    width: 200px;
+    border-radius: 100%;
+    overflow: hidden;
+    //line-height: 0;
+    & > img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        display: block;
+        /*
+        img 預設為 inline，他的 line-height 會造成與父容器高度不一致
+        可以將爸爸 line-height 設為 0，或是將 img 設為 block
+        */
+    }
+}
+
+.icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}

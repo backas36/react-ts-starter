@@ -38,6 +38,9 @@ function App() {
                 >
                     RWD Flexbox Card
                 </a>
+                <a href='/img-ratio' className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'>
+                    Image Ratio
+                </a>
             </div>
         </div>
     );
