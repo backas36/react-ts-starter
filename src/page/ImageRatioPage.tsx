@@ -11,6 +11,10 @@ const ImageRatioPage = () => {
                 </div>
                 <HeartFilledIcon width={56} height={56} color='blue' className={styles.icon} />
             </div>
+            <div className={styles.box2}>
+                <div className={styles.avatarImg}></div>
+                <HeartFilledIcon width={56} height={56} color='blue' className={styles.icon2} />
+            </div>
         </div>
     );
 };

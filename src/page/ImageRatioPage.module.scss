@@ -4,7 +4,7 @@
     display: inline-block;
 }
 .imgBox {
-    width: 200px;
+    width: 500px;
     border-radius: 100%;
     overflow: hidden;
     //line-height: 0;
@@ -24,4 +24,29 @@
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+.box2 {
+    position: relative;
+    display: inline-block;
+    outline: 1px solid red;
+}
+.avatarImg {
+    width: 500px;
+    background-image: url("https://fastly.picsum.photos/id/548/600/400.jpg?hmac=1oOldbzJUyaVWMPqYzOBe6YirmqtWPMUCx93-hE76i0");
+    aspect-ratio: 1/1;
+    background-color: aqua;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+
+    /* 需要列印必須要加上 */
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact; /* for Chrome, Edge, Opera */
+}
+
+.icon2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
