@@ -41,6 +41,9 @@ function App() {
                 <a href='/img-ratio' className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'>
                     Image Ratio
                 </a>
+                <a href='/card-image' className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'>
+                    Card Image
+                </a>
             </div>
         </div>
     );
