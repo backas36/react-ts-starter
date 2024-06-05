@@ -1,0 +1,180 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+}
+
+.card1 {
+    border: 1px solid #ccc;
+    width: 32%;
+    min-width: 300px;
+
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    .cardImage {
+        position: relative;
+        width: 60%;
+        //height: 200px;
+        padding-top: 60%;
+        & > img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    .cardContent {
+        text-align: center;
+        .cardTitle {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        margin-top: 1rem;
+    }
+}
+
+.card169 {
+    outline: 1px solid blue;
+    width: 32%;
+    min-width: 300px;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+
+    .cardImage {
+        position: relative;
+        width: 100%;
+        height: 69%;
+        & > img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    .cardContent {
+        text-align: center;
+        .cardTitle {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        margin-top: 1rem;
+    }
+}
+
+.cardAspectRatio {
+    outline: 1px solid green;
+
+    width: 32%;
+    min-width: 300px;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    .cardImage {
+        //position: relative;
+        //width: 64%;
+        //padding-top: 36%;
+        & > img {
+            //position: absolute;
+            //inset: 0;
+            //width: 100%;
+            //height: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    .cardContent {
+        text-align: center;
+        .cardTitle {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        margin-top: 1rem;
+    }
+}
+
+.card32 {
+    outline: 1px solid salmon;
+
+    width: 32%;
+    min-width: 300px;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+
+    .cardImage {
+        margin: auto auto;
+        position: relative;
+        width: 100%;
+        padding-top: 66.5%;
+        & > img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .cardContent {
+        outline: 1px solid blue;
+
+        text-align: center;
+        .cardTitle {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        margin-top: 1rem;
+    }
+}
+.card32AR {
+    outline: 1px solid salmon;
+
+    width: 32%;
+    min-width: 300px;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+
+    .cardImage {
+        & > img {
+            aspect-ratio: 3/2;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .cardContent {
+        outline: 1px solid blue;
+
+        text-align: center;
+        .cardTitle {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        margin-top: 1rem;
+    }
+}
