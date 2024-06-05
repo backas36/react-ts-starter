@@ -1,0 +1,52 @@
+.box {
+    position: relative;
+    outline: 1px solid red;
+    display: inline-block;
+}
+.imgBox {
+    width: 500px;
+    border-radius: 100%;
+    overflow: hidden;
+    //line-height: 0;
+    & > img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        display: block;
+        /*
+        img 預設為 inline，他的 line-height 會造成與父容器高度不一致
+        可以將爸爸 line-height 設為 0，或是將 img 設為 block
+        */
+    }
+}
+
+.icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.box2 {
+    position: relative;
+    display: inline-block;
+    outline: 1px solid red;
+}
+.avatarImg {
+    width: 500px;
+    background-image: url("https://fastly.picsum.photos/id/548/600/400.jpg?hmac=1oOldbzJUyaVWMPqYzOBe6YirmqtWPMUCx93-hE76i0");
+    aspect-ratio: 1/1;
+    background-color: aqua;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+
+    /* 需要列印必須要加上 */
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact; /* for Chrome, Edge, Opera */
+}
+
+.icon2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

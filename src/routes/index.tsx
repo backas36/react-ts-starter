@@ -11,6 +11,7 @@ const FlexboxItemShrinkPage = lazy(() => import("../page/FlexboxItemShrinkPage")
 const FlexRulePage = lazy(() => import("../page/FlexRulePage"));
 const ImageLazyPage = lazy(() => import("../page/ImageLazyPage"));
 const RwdFlexboxCardPage = lazy(() => import("../page/RwdFlexboxCardPage"));
+const ImageRatioPage = lazy(() => import("../page/ImageRatioPage"));
 
 const router = createBrowserRouter([
     { path: "/", element: <App /> },
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
     { path: "/flexbox-rule", element: <FlexRulePage /> },
     { path: "/image-lazy", element: <ImageLazyPage /> },
     { path: "/rwd-flexbox-card", element: <RwdFlexboxCardPage /> },
+    { path: "/img-ratio", element: <ImageRatioPage /> },
 ]);
 
 const Routes = () => {
