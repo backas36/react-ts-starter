@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -13,6 +13,7 @@ const ImageLazyPage = lazy(() => import("../page/ImageLazyPage"));
 const RwdFlexboxCardPage = lazy(() => import("../page/RwdFlexboxCardPage"));
 const ImageRatioPage = lazy(() => import("../page/ImageRatioPage"));
 const CardImagePage = lazy(() => import("../page/cardImage/CardImagePage"));
+const SuspenseImgPage = lazy(() => import("../page/suspense/SuspenseImgPage"));
 
 const router = createBrowserRouter([
     { path: "/", element: <App /> },
@@ -25,10 +26,15 @@ const router = createBrowserRouter([
     { path: "/rwd-flexbox-card", element: <RwdFlexboxCardPage /> },
     { path: "/img-ratio", element: <ImageRatioPage /> },
     { path: "/card-image", element: <CardImagePage /> },
+    { path: "/suspense-image", element: <SuspenseImgPage /> },
 ]);
 
 const Routes = () => {
-    return <RouterProvider router={router} />;
+    return (
+        <Suspense fallback={<div className='text-2xl text-red-500'>Page Level Loading ...</div>}>
+            <RouterProvider router={router} />
+        </Suspense>
+    );
 };
 
 export default Routes;

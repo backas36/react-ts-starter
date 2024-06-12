@@ -44,6 +44,9 @@ function App() {
                 <a href='/card-image' className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'>
                     Card Image
                 </a>
+                <a href='/suspense-image' className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'>
+                    Suspense Image Loading
+                </a>
             </div>
         </div>
     );
