@@ -47,6 +47,12 @@ function App() {
                 <a href='/suspense-image' className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'>
                     Suspense Image Loading
                 </a>
+                <a
+                    href='/object-fit-image'
+                    className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'
+                >
+                    Object-fit Image
+                </a>
             </div>
         </div>
     );
