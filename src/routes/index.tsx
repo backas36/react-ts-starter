@@ -14,6 +14,7 @@ const RwdFlexboxCardPage = lazy(() => import("../page/RwdFlexboxCardPage"));
 const ImageRatioPage = lazy(() => import("../page/ImageRatioPage"));
 const CardImagePage = lazy(() => import("../page/cardImage/CardImagePage"));
 const SuspenseImgPage = lazy(() => import("../page/suspense/SuspenseImgPage"));
+const UseLayoutEffectPage = lazy(() => import("../page/useLayoutEffect/UseLayoutEffectPage"));
 
 const router = createBrowserRouter([
     { path: "/", element: <App /> },
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
     { path: "/img-ratio", element: <ImageRatioPage /> },
     { path: "/card-image", element: <CardImagePage /> },
     { path: "/suspense-image", element: <SuspenseImgPage /> },
+    { path: "/useLayoutEffect", element: <UseLayoutEffectPage /> },
 ]);
 
 const Routes = () => {
