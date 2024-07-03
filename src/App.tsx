@@ -47,6 +47,9 @@ function App() {
                 <a href='/suspense-image' className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'>
                     Suspense Image Loading
                 </a>
+                <a href='/useLayoutEffect' className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'>
+                    useLayoutEffect
+                </a>
             </div>
         </div>
     );
