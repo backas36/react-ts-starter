@@ -1,4 +1,4 @@
-import { memo, useRef, useState } from "react";
+import { memo, useMemo, useRef, useState } from "react";
 
 //const temp = { name: "Component" };
 
@@ -13,20 +13,23 @@ const RerenderComponent = ({ demoProps }: { demoProps: string | { name: string }
     );
 };
 
-//const MemoComponent = memo(RerenderComponent);
-const MemoComponent = memo(RerenderComponent, (prevProps, nextProps) => {
-    if (typeof prevProps.demoProps === "object" && typeof nextProps.demoProps === "object") {
-        return prevProps.demoProps.name === nextProps.demoProps.name;
-    }
-    return false;
-});
+const MemoComponent = memo(RerenderComponent);
+//const MemoComponent = memo(RerenderComponent, (prevProps, nextProps) => {
+//    if (typeof prevProps.demoProps === "object" && typeof nextProps.demoProps === "object") {
+//        return prevProps.demoProps.name === nextProps.demoProps.name;
+//    }
+//    return false;
+//});
 
 const MemoPage = () => {
-    const temp = { name: "Component" };
+    //const temp = { name: "Component" };
     const [input, setInput] = useState("");
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInput(e.target.value);
     };
+    const temp = useMemo(() => {
+        return { name: "Component" };
+    }, []);
 
     return (
         <div className='mx-auto my-11 flex w-1/2 flex-col gap-4'>
