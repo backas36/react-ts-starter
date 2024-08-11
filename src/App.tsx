@@ -53,6 +53,9 @@ function App() {
                 <a href='/memo' className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'>
                     memo
                 </a>
+                <a href='/useCallback' className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'>
+                    useCallback
+                </a>
             </div>
         </div>
     );
