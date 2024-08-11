@@ -27,6 +27,7 @@ const MemoPage = () => {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInput(e.target.value);
     };
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const temp = useMemo(() => {
         return { name: "Component" };
     }, []);
@@ -40,7 +41,9 @@ const MemoPage = () => {
                 className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:ring-blue-500'
             />
             <RerenderComponent demoProps={"RerenderComponent"} />
-            <MemoComponent demoProps={temp} />
+            <MemoComponent demoProps={"MemoComponent"} />
+            {/*<RerenderComponent demoProps={temp} />*/}
+            {/*<MemoComponent demoProps={temp} />*/}
         </div>
     );
 };
