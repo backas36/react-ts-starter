@@ -17,6 +17,7 @@ const SuspenseImgPage = lazy(() => import("../page/suspense/SuspenseImgPage"));
 const UseLayoutEffectPage = lazy(() => import("../page/useLayoutEffect/UseLayoutEffectPage"));
 const MemoPage = lazy(() => import("../page/optimization/MemoPage"));
 const CallbackPage = lazy(() => import("../page/optimization/CallbackPage"));
+const ObjectFitImagePage = lazy(() => import("../page/objectFitImage/ObjectFitImagePage"));
 
 const router = createBrowserRouter([
     { path: "/", element: <App /> },
@@ -33,6 +34,7 @@ const router = createBrowserRouter([
     { path: "/useLayoutEffect", element: <UseLayoutEffectPage /> },
     { path: "/memo", element: <MemoPage /> },
     { path: "/useCallback", element: <CallbackPage /> },
+    { path: "/object-fit-image", element: <ObjectFitImagePage /> },
 ]);
 
 const Routes = () => {
