@@ -48,6 +48,3 @@ const MemoPage = () => {
     );
 };
 export default MemoPage;
-
-// memo
-// 1. 當 props 不變時，不會重新渲染
