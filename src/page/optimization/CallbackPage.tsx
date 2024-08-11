@@ -1,46 +1,44 @@
 import { memo, useCallback, useRef, useState } from "react";
 
-const MyComponent = ({
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    fn,
-    withUseCallback,
-}: {
-    fn: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    withUseCallback: boolean;
-}) => {
+const MyComponent = ({ fn, withUseCallback }: { fn: () => void; withUseCallback: boolean }) => {
     const ref = useRef(0);
     ref.current++;
     const callback = withUseCallback ? "useCallback" : "no useCallback";
     return (
-        <p>
-            MyComponent {callback}, ref:{ref.current}
-        </p>
+        <div>
+            <span className='mr-4 '>
+                {callback}, ref:{ref.current}
+            </span>
+            <button onClick={fn} className='bg-slate-400 px-2 text-fuchsia-500'>
+                click
+            </button>
+        </div>
     );
 };
+const MemoComponent = memo(({ fn, withUseCallback }: { fn: () => void; withUseCallback: boolean }) => {
+    return <div className='text-red-400'>Memo:{MyComponent({ fn, withUseCallback })}</div>;
+});
 
-const MemoComponent = memo(MyComponent);
 const CallbackPage = () => {
-    const [input, setInput] = useState("");
-
-    const handleSomethingUseCallback = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-        setInput(e.target.value);
+    const [count, setCount] = useState(1);
+    const handleSomethingUseCallback = useCallback(() => {
+        setCount((count) => {
+            return count + 1;
+        });
     }, []);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setInput(e.target.value);
+    const handleChange = () => {
+        setCount((count) => count + 1);
     };
 
     return (
         <div className='mx-auto my-11 flex w-1/2 flex-col gap-4'>
-            <input
-                type='text'
-                value={input}
-                onChange={handleChange}
-                className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:ring-blue-500'
-            />
-
-            <MemoComponent fn={handleSomethingUseCallback} withUseCallback={true} />
+            <button onClick={handleChange} className='bg-slate-400 text-fuchsia-500'>
+                {count}
+            </button>
+            <MyComponent fn={handleSomethingUseCallback} withUseCallback={true} />
             <MemoComponent fn={handleChange} withUseCallback={false} />
+            <MemoComponent fn={handleSomethingUseCallback} withUseCallback={true} />
         </div>
     );
 };
