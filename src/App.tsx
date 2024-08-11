@@ -50,6 +50,9 @@ function App() {
                 <a href='/useLayoutEffect' className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'>
                     useLayoutEffect
                 </a>
+                <a href='/memo' className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'>
+                    memo
+                </a>
             </div>
         </div>
     );
