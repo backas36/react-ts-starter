@@ -1,10 +1,12 @@
+import { EnhancedLoading } from "@/components/EnhancedLoading";
 import TButton from "@/components/TButton";
-import { WithClickTracking } from "@/components/withClickTracking";
+import { WithClickTracking } from "@/hooks/withClickTracking";
 
 const HocPage = () => {
     return (
         <div>
             <h1 className='text-2xl font-bold'>HOC Click</h1>
+            <EnhancedLoading txt='Wait...' />
             <div className='flex flex-col gap-2'>
                 <WithClickTracking trackingInfo='Button1'>
                     <TButton btnText='Click1' />
