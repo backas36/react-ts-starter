@@ -62,6 +62,9 @@ function App() {
                 <a href='/useCallback' className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'>
                     useCallback
                 </a>
+                <a href='/hoc' className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'>
+                    React-HOC
+                </a>
             </div>
         </div>
     );

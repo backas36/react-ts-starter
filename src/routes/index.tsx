@@ -18,7 +18,7 @@ const UseLayoutEffectPage = lazy(() => import("../page/useLayoutEffect/UseLayout
 const MemoPage = lazy(() => import("../page/optimization/MemoPage"));
 const CallbackPage = lazy(() => import("../page/optimization/CallbackPage"));
 const ObjectFitImagePage = lazy(() => import("../page/objectFitImage/ObjectFitImagePage"));
-
+const HocPage = lazy(() => import("../page/hoc/HocPage"));
 const router = createBrowserRouter([
     { path: "/", element: <App /> },
     { path: "/debounce-throttle", element: <DebounceThrottlePage /> },
@@ -35,6 +35,7 @@ const router = createBrowserRouter([
     { path: "/memo", element: <MemoPage /> },
     { path: "/useCallback", element: <CallbackPage /> },
     { path: "/object-fit-image", element: <ObjectFitImagePage /> },
+    { path: "/hoc", element: <HocPage /> },
 ]);
 
 const Routes = () => {
