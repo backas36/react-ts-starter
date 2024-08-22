@@ -4,7 +4,7 @@ function App() {
     return (
         <div>
             <h1 className={style.h1}>Hello world!</h1>
-            <div className='flex flex-col'>
+            <div className='grid grid-cols-3 gap-4'>
                 <a
                     href='/debounce-throttle'
                     className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'
@@ -64,6 +64,12 @@ function App() {
                 </a>
                 <a href='/hoc' className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'>
                     React-HOC
+                </a>
+                <a
+                    href='/hoc-check-permission'
+                    className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'
+                >
+                    React-HOC-CheckPermission
                 </a>
             </div>
         </div>

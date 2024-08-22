@@ -19,6 +19,8 @@ const MemoPage = lazy(() => import("../page/optimization/MemoPage"));
 const CallbackPage = lazy(() => import("../page/optimization/CallbackPage"));
 const ObjectFitImagePage = lazy(() => import("../page/objectFitImage/ObjectFitImagePage"));
 const HocPage = lazy(() => import("../page/hoc/HocPage"));
+const HOCPermissionPage = lazy(() => import("../page/hoc/HOCPermissionPage"));
+
 const router = createBrowserRouter([
     { path: "/", element: <App /> },
     { path: "/debounce-throttle", element: <DebounceThrottlePage /> },
@@ -36,6 +38,7 @@ const router = createBrowserRouter([
     { path: "/useCallback", element: <CallbackPage /> },
     { path: "/object-fit-image", element: <ObjectFitImagePage /> },
     { path: "/hoc", element: <HocPage /> },
+    { path: "/hoc-check-permission", element: <HOCPermissionPage /> },
 ]);
 
 const Routes = () => {
