@@ -71,6 +71,12 @@ function App() {
                 >
                     React-HOC-CheckPermission
                 </a>
+                <a
+                    href='/extensible-style-pattern-01'
+                    className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'
+                >
+                    Extensible Style Pattern 01
+                </a>
             </div>
         </div>
     );

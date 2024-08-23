@@ -20,6 +20,7 @@ const CallbackPage = lazy(() => import("../page/optimization/CallbackPage"));
 const ObjectFitImagePage = lazy(() => import("../page/objectFitImage/ObjectFitImagePage"));
 const HocPage = lazy(() => import("../page/hoc/HocPage"));
 const HOCPermissionPage = lazy(() => import("../page/hoc/HOCPermissionPage"));
+const ExtensibleStylePatternPage01 = lazy(() => import("../page/extensibleStylePattern/ExtensibleStylePatternPage01"));
 
 const router = createBrowserRouter([
     { path: "/", element: <App /> },
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
     { path: "/object-fit-image", element: <ObjectFitImagePage /> },
     { path: "/hoc", element: <HocPage /> },
     { path: "/hoc-check-permission", element: <HOCPermissionPage /> },
+    { path: "/extensible-style-pattern-01", element: <ExtensibleStylePatternPage01 /> },
 ]);
 
 const Routes = () => {
