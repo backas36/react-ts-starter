@@ -4,7 +4,7 @@ import styles from "./PatternBtn.module.scss";
 
 interface IPatternBtnProps {
     color?: string;
-    size: "small" | "medium" | "large";
+    size?: "small" | "medium" | "large";
     onClick: () => void;
     children: ReactNode;
 }
