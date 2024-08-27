@@ -77,6 +77,12 @@ function App() {
                 >
                     Extensible Style Pattern 01
                 </a>
+                <a
+                    href='/compound-component-01'
+                    className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'
+                >
+                    Compound component 01
+                </a>
             </div>
         </div>
     );
