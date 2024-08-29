@@ -1,5 +1,5 @@
+import TButton from "@/components/button/TButton";
 import { EnhancedLoading } from "@/components/EnhancedLoading";
-import TButton from "@/components/TButton";
 import { WithClickTracking } from "@/hooks/withClickTracking";
 
 const HocPage = () => {
