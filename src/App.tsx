@@ -32,6 +32,9 @@ function App() {
                 <a href='/image-lazy' className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'>
                     Image Lazy Loading 01
                 </a>
+                <a href='/image-lazy-02' className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'>
+                    Image Lazy Loading 02
+                </a>
                 <a
                     href='/rwd-flexbox-card'
                     className='border-b py-2 text-2xl font-medium text-blue-600 hover:underline'

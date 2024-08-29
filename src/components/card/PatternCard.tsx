@@ -35,7 +35,9 @@ const PatternCard = ({
     const cardClasses = `${variantStyles[variant]} ${widthStyles[widthType]} ${shadowStyle} overflow-hidden rounded transition duration-300 ease-in-out transform hover:scale-105`;
     return (
         <div className={cardClasses}>
-            <img className='w-full' src={image} alt='Card image' />
+            <div className='h-50'>
+                <img className='aspect-square h-full w-full object-cover' src={image} alt='Card image' />
+            </div>
             <div className='px-6 py-4'>
                 <div className='mb-2 text-xl font-bold'>{title}</div>
                 {subtitle && <div className='mb-2 text-lg'>{subtitle}</div>}
