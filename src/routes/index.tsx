@@ -9,7 +9,7 @@ const Flexbox01Page = lazy(() => import("../page/Flexbox01Page"));
 const FlexboxItemGrowPage = lazy(() => import("../page/FlexboxItemGrowPage"));
 const FlexboxItemShrinkPage = lazy(() => import("../page/FlexboxItemShrinkPage"));
 const FlexRulePage = lazy(() => import("../page/FlexRulePage"));
-const ImageLazyPage = lazy(() => import("../page/ImageLazyPage"));
+const ImageLazyPage = lazy(() => import("../page/imageLazyLoading/ImageLazyPage"));
 const RwdFlexboxCardPage = lazy(() => import("../page/RwdFlexboxCardPage"));
 const ImageRatioPage = lazy(() => import("../page/ImageRatioPage"));
 const CardImagePage = lazy(() => import("../page/cardImage/CardImagePage"));
@@ -22,6 +22,7 @@ const HocPage = lazy(() => import("../page/hoc/HocPage"));
 const HOCPermissionPage = lazy(() => import("../page/hoc/HOCPermissionPage"));
 const ExtensibleStylePatternPage01 = lazy(() => import("../page/extensibleStylePattern/ExtensibleStylePatternPage01"));
 const CompoundComponent01Page = lazy(() => import("../page/compound/CompoundComponent01Page"));
+const ImageLazyLoading02Page = lazy(() => import("../page/imageLazyLoading/ImageLazyLoading02Page"));
 
 const router = createBrowserRouter([
     { path: "/", element: <App /> },
@@ -43,6 +44,7 @@ const router = createBrowserRouter([
     { path: "/hoc-check-permission", element: <HOCPermissionPage /> },
     { path: "/extensible-style-pattern-01", element: <ExtensibleStylePatternPage01 /> },
     { path: "/compound-component-01", element: <CompoundComponent01Page /> },
+    { path: "/image-lazy-02", element: <ImageLazyLoading02Page /> },
 ]);
 
 const Routes = () => {
