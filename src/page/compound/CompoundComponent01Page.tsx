@@ -1,6 +1,36 @@
+import Accordion from "@/components/accordion/Accordion";
 import CompoundSwitch from "@/components/switch/CompoundSwitch";
 import BasicTabs from "@/components/tab/BasicTabs";
 
+const accordionData = [
+    {
+        title: "123",
+        content: (
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia iure voluptatem aperiam blanditiis
+                perferendis eum consequatur repellat repellendus officia est.
+            </p>
+        ),
+    },
+    {
+        title: "456",
+        content: (
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia iure voluptatem aperiam blanditiis
+                perferendis eum consequatur repellat repellendus officia est.
+            </p>
+        ),
+    },
+    {
+        title: "789",
+        content: (
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia iure voluptatem aperiam blanditiis
+                perferendis eum consequatur repellat repellendus officia est.
+            </p>
+        ),
+    },
+];
 const CompoundComponent01Page = () => {
     const onToggle = (isOn: boolean) => {
         console.log("isOn", isOn);
@@ -25,6 +55,18 @@ const CompoundComponent01Page = () => {
                     <CompoundSwitch.Button />
                 </div>
             </CompoundSwitch>
+            <div className='mt-10'>
+                <Accordion multipleMode>
+                    {accordionData.map((row, idx) => {
+                        return (
+                            <Accordion.Item key={idx}>
+                                <Accordion.Title idx={idx}>{row.title}</Accordion.Title>
+                                <Accordion.Content idx={idx}>{row.content}</Accordion.Content>
+                            </Accordion.Item>
+                        );
+                    })}
+                </Accordion>
+            </div>
         </div>
     );
 };
