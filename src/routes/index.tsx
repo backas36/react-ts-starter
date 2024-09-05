@@ -23,6 +23,7 @@ const HOCPermissionPage = lazy(() => import("../page/hoc/HOCPermissionPage"));
 const ExtensibleStylePatternPage01 = lazy(() => import("../page/extensibleStylePattern/ExtensibleStylePatternPage01"));
 const CompoundComponent01Page = lazy(() => import("../page/compound/CompoundComponent01Page"));
 const ImageLazyLoading02Page = lazy(() => import("../page/imageLazyLoading/ImageLazyLoading02Page"));
+const RenderPropsPage01 = lazy(() => import("../page/renderProps/RenderPropsPage01"));
 
 const router = createBrowserRouter([
     { path: "/", element: <App /> },
@@ -45,6 +46,7 @@ const router = createBrowserRouter([
     { path: "/extensible-style-pattern-01", element: <ExtensibleStylePatternPage01 /> },
     { path: "/compound-component-01", element: <CompoundComponent01Page /> },
     { path: "/image-lazy-02", element: <ImageLazyLoading02Page /> },
+    { path: "/render-props-01", element: <RenderPropsPage01 /> },
 ]);
 
 const Routes = () => {
