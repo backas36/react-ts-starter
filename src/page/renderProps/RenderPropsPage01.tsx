@@ -1,18 +1,19 @@
 import { useState } from "react";
 
 const RenderPropsPage01 = () => {
+    const [value, setValue] = useState("");
+
     return (
         <div>
-            <TemperatureInput />
-            <Kelvin />
-            <Celsius />
+            <TemperatureInput value={value} setValue={setValue} />
+            <Kelvin value={value} />
+            <Celsius value={value} />
         </div>
     );
 };
 export default RenderPropsPage01;
 
-const TemperatureInput = () => {
-    const [value, setValue] = useState("");
+const TemperatureInput = ({ value, setValue }: { value: string; setValue: (value: string) => void }) => {
     return (
         <input
             value={value}
@@ -23,7 +24,7 @@ const TemperatureInput = () => {
     );
 };
 
-const Kelvin = ({ value }: { value: number }) => {
+const Kelvin = ({ value }: { value: string }) => {
     return (
         <div className='w-1/2 rounded-md bg-blue-100 p-3 text-lg font-semibold text-blue-600 shadow-sm'>
             Kelvin: {value}
@@ -31,7 +32,7 @@ const Kelvin = ({ value }: { value: number }) => {
     );
 };
 
-const Celsius = ({ value }: { value: number }) => {
+const Celsius = ({ value }: { value: string }) => {
     return (
         <div className='w-1/2 rounded-md bg-blue-100 p-3 text-lg font-semibold text-blue-600 shadow-sm'>
             Celsius: {value}
