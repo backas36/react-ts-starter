@@ -1,26 +1,36 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 
 const RenderPropsPage01 = () => {
-    const [value, setValue] = useState("");
-
     return (
         <div>
-            <TemperatureInput value={value} setValue={setValue} />
-            <Kelvin value={value} />
-            <Celsius value={value} />
+            <TemperatureInput
+                render={(value) => {
+                    return (
+                        <>
+                            <Kelvin value={value} />
+                            <Celsius value={value} />
+                        </>
+                    );
+                }}
+            />
         </div>
     );
 };
 export default RenderPropsPage01;
 
-const TemperatureInput = ({ value, setValue }: { value: string; setValue: (value: string) => void }) => {
+const TemperatureInput = (props: { render: (value: string) => ReactNode }) => {
+    const [value, setValue] = useState("");
+
     return (
-        <input
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-            className='w-1/2 rounded-lg border px-3 py-2 text-gray-700 focus:border-blue-500 focus:outline-none'
-            placeholder='Enter temperature'
-        />
+        <>
+            <input
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
+                className='w-1/2 rounded-lg border px-3 py-2 text-gray-700 focus:border-blue-500 focus:outline-none'
+                placeholder='Enter temperature'
+            />
+            {props.render(value)}
+        </>
     );
 };
 
