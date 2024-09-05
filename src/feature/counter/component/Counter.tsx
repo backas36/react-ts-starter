@@ -1,18 +1,18 @@
 import PatternBtn from "@/components/button/PatternBtn";
-import { ReactNode, useState } from "react";
+import { Dispatch, ReactNode, useState } from "react";
 
-const Counter = () => {
+type Props = {
+    children: (value: number, setCount: Dispatch<React.SetStateAction<number>>) => ReactNode;
+};
+
+const Counter = (props: Props) => {
     const [count, setCount] = useState(0);
     return (
         <div className='flex items-center justify-center space-x-4 rounded-xl bg-gray-50 p-6 shadow-lg'>
-            <Button onClick={() => setCount((prev) => prev + 1)}>+</Button>
-            <ShowCounter value={count} />
-            <Button onClick={() => setCount((prev) => prev - 1)}>-</Button>
-            <Select value={count} onChange={(value) => setCount(value)} />
+            {props.children(count, setCount)}
         </div>
     );
 };
-export default Counter;
 
 const ShowCounter = ({ value }: { value: number }) => {
     return (
@@ -52,3 +52,9 @@ const Select = ({ value, onChange }: { value: number; onChange: (value: number) 
         </select>
     );
 };
+
+Counter.Select = Select;
+Counter.Button = Button;
+Counter.ShowCounter = ShowCounter;
+
+export default Counter;
