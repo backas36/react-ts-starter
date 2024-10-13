@@ -20,6 +20,7 @@ const links = [
     { href: "/extensible-style-pattern-01", name: "Extensible Style Pattern 01" },
     { href: "/compound-component-01", name: "Compound component 01" },
     { href: "/render-props-01", name: "Render Props 01" },
+    { href: "/forward-ref", name: "Forward Ref 01" },
 ];
 
 function App() {
