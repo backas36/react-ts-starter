@@ -25,6 +25,7 @@ const CompoundComponent01Page = lazy(() => import("../page/compound/CompoundComp
 const ImageLazyLoading02Page = lazy(() => import("../page/imageLazyLoading/ImageLazyLoading02Page"));
 const RenderPropsPage01 = lazy(() => import("../page/renderProps/RenderPropsPage01"));
 const ForwardRefPage01 = lazy(() => import("../page/forwardRef/ForwardRefPage01"));
+const RefTipsPage = lazy(() => import("../page/refTips/RefTipsPage"));
 const router = createBrowserRouter([
     { path: "/", element: <App /> },
     { path: "/debounce-throttle", element: <DebounceThrottlePage /> },
@@ -48,6 +49,7 @@ const router = createBrowserRouter([
     { path: "/image-lazy-02", element: <ImageLazyLoading02Page /> },
     { path: "/render-props-01", element: <RenderPropsPage01 /> },
     { path: "/forward-ref", element: <ForwardRefPage01 /> },
+    { path: "/ref-tips", element: <RefTipsPage /> },
 ]);
 
 const Routes = () => {
