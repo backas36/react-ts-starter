@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import TimePassed from "./TimePassed";
+import MultipleRefs from "./MultipleRefs";
 
 const RefTipsPage = () => {
     // 使用一般方法建立 ref
@@ -30,8 +31,8 @@ const RefTipsPage = () => {
         <div>
             <input ref={inputRef} className='border-2  focus:outline-none focus:ring-2 focus:ring-blue-500' />
             <TimePassed />
-            {/*
             <MultipleRefs />
+            {/*
             <ForwardFormRef ref={formRef as React.RefCallback<HTMLDivElement>} />*/}
         </div>
     );
