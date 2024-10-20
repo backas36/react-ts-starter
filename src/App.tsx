@@ -21,6 +21,7 @@ const links = [
     { href: "/compound-component-01", name: "Compound component 01" },
     { href: "/render-props-01", name: "Render Props 01" },
     { href: "/forward-ref", name: "Forward Ref 01" },
+    { href: "/ref-tips", name: "Ref Tips" },
 ];
 
 function App() {
