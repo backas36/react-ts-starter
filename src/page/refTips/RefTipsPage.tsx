@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef } from "react";
 import TimePassed from "./TimePassed";
 import MultipleRefs from "./MultipleRefs";
 import ForwardFormRef from "./ForwardFormRef";
+import CatFriends from "./CatFriends";
 
 const RefTipsPage = () => {
     // 使用一般方法建立 ref
@@ -34,6 +35,7 @@ const RefTipsPage = () => {
             <TimePassed />
             <MultipleRefs />
             <ForwardFormRef ref={formRef as React.RefCallback<HTMLDivElement>} />
+            <CatFriends />
         </div>
     );
 };
