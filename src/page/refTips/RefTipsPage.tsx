@@ -1,6 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import TimePassed from "./TimePassed";
 import MultipleRefs from "./MultipleRefs";
+import ForwardFormRef from "./ForwardFormRef";
 
 const RefTipsPage = () => {
     // 使用一般方法建立 ref
@@ -22,18 +23,17 @@ const RefTipsPage = () => {
     //    formRef.current?.focus();
     //}, []);
 
-    //const formRef = useCallback((inputNode: HTMLDivElement) => {
-    //    if (inputNode) {
-    //        inputNode.focus();
-    //    }
-    //}, []);
+    const formRef = useCallback((inputNode: HTMLDivElement) => {
+        if (inputNode) {
+            inputNode.focus();
+        }
+    }, []);
     return (
         <div>
             <input ref={inputRef} className='border-2  focus:outline-none focus:ring-2 focus:ring-blue-500' />
             <TimePassed />
             <MultipleRefs />
-            {/*
-            <ForwardFormRef ref={formRef as React.RefCallback<HTMLDivElement>} />*/}
+            <ForwardFormRef ref={formRef as React.RefCallback<HTMLDivElement>} />
         </div>
     );
 };
